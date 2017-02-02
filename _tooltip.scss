@@ -2,23 +2,15 @@
   box-sizing: border-box;
   width: calc(100vw - 16px);
   position: absolute;
-  border: 1px solid $olympus;
-  padding: $space-inset;
-  font-size: $mobile-small;
-  color: $kuzbas;
+  border: 1px solid #dfe4e7;
+  padding: 16px;
+  font-size: 14px;
+  color: #475058;
   letter-spacing: 0.3px;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-  @include medium {
-    font-size: $tablet-small;
-  }
-
-  @include large {
-    font-size: $desktop-small;
-  }
-
-  @include mediumlarge {
+  @media only screen and (min-width: 768px) {
     width: auto;
     max-width: 410px;
     display: inline-block;
