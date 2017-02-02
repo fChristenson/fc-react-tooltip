@@ -1,25 +1,25 @@
-const SPACE_BETWEEN_ELEMENTS = 8;
+var SPACE_BETWEEN_ELEMENTS = 8;
 
-function getTopOffset (dims, targetDims) {
+function getTopOffset(dims, targetDims) {
   return targetDims.top - getElementHeightDiff(dims, targetDims) / 2;
 }
 
-function getElementWidthDiff (dims, targetDims) {
+function getElementWidthDiff(dims, targetDims) {
   return Math.abs(dims.width - targetDims.width);
 }
 
-function getElementHeightDiff (dims, targetDims) {
+function getElementHeightDiff(dims, targetDims) {
   return Math.abs(dims.height - targetDims.height);
 }
 
-function getLeftOffset (dims, targetDims) {
+function getLeftOffset(dims, targetDims) {
   if (targetDims.width > dims.width) return targetDims.left + getElementWidthDiff(dims, targetDims) / 2;
   if (targetDims.width < dims.width) return targetDims.left - getElementWidthDiff(dims, targetDims) / 2;
 
   return targetDims.left;
 }
 
-function getTooltipPosition (dims, targetDims, window) {
+function getTooltipPosition(dims, targetDims, window) {
   if (canFitAboveTarget(dims, targetDims) && !elementTooWide(dims, targetDims, window)) {
     return getAboveCenterTargetPosition(dims, targetDims);
   }
@@ -54,52 +54,52 @@ function getTooltipPosition (dims, targetDims, window) {
   };
 }
 
-function canFitTopLeftOfTarget (dims, targetDims) {
+function canFitTopLeftOfTarget(dims, targetDims) {
   return canFitAboveTarget(dims, targetDims) && canFitLeftOfTarget(dims, targetDims);
 }
 
-function canFitBottomLeftOfTarget (dims, targetDims, window) {
+function canFitBottomLeftOfTarget(dims, targetDims, window) {
   return canFitBelowTarget(dims, targetDims, window) && canFitLeftOfTarget(dims, targetDims);
 }
 
-function canFitBottomRightOfTarget (dims, targetDims, window) {
+function canFitBottomRightOfTarget(dims, targetDims, window) {
   return canFitBelowTarget(dims, targetDims, window) && canFitRightOfTarget(dims, targetDims, window);
 }
 
-function canFitTopRightOfTarget (dims, targetDims, window) {
+function canFitTopRightOfTarget(dims, targetDims, window) {
   return canFitAboveTarget(dims, targetDims) && canFitRightOfTarget(dims, targetDims, window);
 }
 
-function getTopLeftOfTargetPosition (dims, targetDims) {
+function getTopLeftOfTargetPosition(dims, targetDims) {
   return {
     top: targetDims.top - dims.height - SPACE_BETWEEN_ELEMENTS,
     left: targetDims.left - dims.width - SPACE_BETWEEN_ELEMENTS
   };
 }
 
-function getBottomLeftOfTargetPosition (dims, targetDims) {
+function getBottomLeftOfTargetPosition(dims, targetDims) {
   return {
     top: targetDims.top + targetDims.height + SPACE_BETWEEN_ELEMENTS,
     left: targetDims.left - dims.width - SPACE_BETWEEN_ELEMENTS
   };
 }
 
-function getBottomRightOfTargetPosition (targetDims) {
+function getBottomRightOfTargetPosition(targetDims) {
   return {
     top: targetDims.top + targetDims.height + SPACE_BETWEEN_ELEMENTS,
     left: targetDims.left + targetDims.width + SPACE_BETWEEN_ELEMENTS
   };
 }
 
-function getTopRightOfTargetPosition (dims, targetDims) {
+function getTopRightOfTargetPosition(dims, targetDims) {
   return {
     top: targetDims.top - dims.height - SPACE_BETWEEN_ELEMENTS,
     left: targetDims.left + targetDims.width + SPACE_BETWEEN_ELEMENTS
   };
 }
 
-function getAboveTargetPosition (dims, targetDims) {
-  const elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
+function getAboveTargetPosition(dims, targetDims) {
+  var elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
 
   return {
     top: targetDims.top - elementPosition,
@@ -107,8 +107,8 @@ function getAboveTargetPosition (dims, targetDims) {
   };
 }
 
-function getAboveCenterTargetPosition (dims, targetDims) {
-  const elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
+function getAboveCenterTargetPosition(dims, targetDims) {
+  var elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
 
   return {
     top: targetDims.top - elementPosition,
@@ -116,8 +116,8 @@ function getAboveCenterTargetPosition (dims, targetDims) {
   };
 }
 
-function getLeftOfTargetPosition (dims, targetDims) {
-  const elementPosition = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
+function getLeftOfTargetPosition(dims, targetDims) {
+  var elementPosition = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
 
   return {
     top: getTopOffset(dims, targetDims),
@@ -125,8 +125,8 @@ function getLeftOfTargetPosition (dims, targetDims) {
   };
 }
 
-function getBelowTargetPosition (dims, targetDims) {
-  const targetEndPosition = targetDims.top + targetDims.height;
+function getBelowTargetPosition(dims, targetDims) {
+  var targetEndPosition = targetDims.top + targetDims.height;
 
   return {
     top: targetEndPosition + SPACE_BETWEEN_ELEMENTS,
@@ -134,8 +134,8 @@ function getBelowTargetPosition (dims, targetDims) {
   };
 }
 
-function getBelowCenterTargetPosition (dims, targetDims) {
-  const targetEndPosition = targetDims.top + targetDims.height;
+function getBelowCenterTargetPosition(dims, targetDims) {
+  var targetEndPosition = targetDims.top + targetDims.height;
 
   return {
     top: targetEndPosition + SPACE_BETWEEN_ELEMENTS,
@@ -143,8 +143,8 @@ function getBelowCenterTargetPosition (dims, targetDims) {
   };
 }
 
-function getRightOfTargetPosition (dims, targetDims) {
-  const targetEndPosition = targetDims.left + targetDims.width;
+function getRightOfTargetPosition(dims, targetDims) {
+  var targetEndPosition = targetDims.left + targetDims.width;
 
   return {
     top: getTopOffset(dims, targetDims),
@@ -152,35 +152,35 @@ function getRightOfTargetPosition (dims, targetDims) {
   };
 }
 
-function canFitRightOfTarget (dims, targetDims, window) {
-  const targetEndPosition = targetDims.left + targetDims.width;
-  const elementTotalWidth = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
+function canFitRightOfTarget(dims, targetDims, window) {
+  var targetEndPosition = targetDims.left + targetDims.width;
+  var elementTotalWidth = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
 
   return targetEndPosition + elementTotalWidth <= window.innerWidth;
 }
 
-function elementTooHigh (dims, targetDims, window) {
+function elementTooHigh(dims, targetDims, window) {
   return getTopOffset(dims, targetDims) <= 0 || getTopOffset(dims, targetDims) + dims.height >= window.innerHeight;
 }
 
-function elementTooWide (dims, targetDims, window) {
+function elementTooWide(dims, targetDims, window) {
   return getLeftOffset(dims, targetDims) <= 0 || getLeftOffset(dims, targetDims) + dims.width >= window.innerWidth;
 }
 
-function canFitLeftOfTarget (dims, targetDims) {
-  const neededArea = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
+function canFitLeftOfTarget(dims, targetDims) {
+  var neededArea = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
   return targetDims.left - neededArea >= 0;
 }
 
-function canFitBelowTarget (dims, targetDims, window) {
-  const targetBottomPosition = targetDims.top + targetDims.height;
-  const neededArea = dims.height + (SPACE_BETWEEN_ELEMENTS * 2);
+function canFitBelowTarget(dims, targetDims, window) {
+  var targetBottomPosition = targetDims.top + targetDims.height;
+  var neededArea = dims.height + SPACE_BETWEEN_ELEMENTS * 2;
 
-  return  targetBottomPosition + neededArea <= window.innerHeight;
+  return targetBottomPosition + neededArea <= window.innerHeight;
 }
 
-function canFitAboveTarget (dims, targetDims) {
-  const areaNeeded = targetDims.top - dims.height - (SPACE_BETWEEN_ELEMENTS * 2);
+function canFitAboveTarget(dims, targetDims) {
+  var areaNeeded = targetDims.top - dims.height - SPACE_BETWEEN_ELEMENTS * 2;
   return areaNeeded >= 0;
 }
 

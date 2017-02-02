@@ -1,6 +1,6 @@
 var ReactDOM = require('react-dom');
 var React = require('react');
-var Tooltip = require('../index');
+var Tooltip = require('../src/index');
 
 var Example = React.createClass({
 

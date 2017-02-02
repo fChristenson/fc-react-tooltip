@@ -9610,7 +9610,7 @@ module.exports = React.createClass({
 /* 83 */
 /***/ (function(module, exports) {
 
-const SPACE_BETWEEN_ELEMENTS = 8;
+var SPACE_BETWEEN_ELEMENTS = 8;
 
 function getTopOffset(dims, targetDims) {
   return targetDims.top - getElementHeightDiff(dims, targetDims) / 2;
@@ -9711,7 +9711,7 @@ function getTopRightOfTargetPosition(dims, targetDims) {
 }
 
 function getAboveTargetPosition(dims, targetDims) {
-  const elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
+  var elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
 
   return {
     top: targetDims.top - elementPosition,
@@ -9720,7 +9720,7 @@ function getAboveTargetPosition(dims, targetDims) {
 }
 
 function getAboveCenterTargetPosition(dims, targetDims) {
-  const elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
+  var elementPosition = dims.height + SPACE_BETWEEN_ELEMENTS;
 
   return {
     top: targetDims.top - elementPosition,
@@ -9729,7 +9729,7 @@ function getAboveCenterTargetPosition(dims, targetDims) {
 }
 
 function getLeftOfTargetPosition(dims, targetDims) {
-  const elementPosition = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
+  var elementPosition = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
 
   return {
     top: getTopOffset(dims, targetDims),
@@ -9738,7 +9738,7 @@ function getLeftOfTargetPosition(dims, targetDims) {
 }
 
 function getBelowTargetPosition(dims, targetDims) {
-  const targetEndPosition = targetDims.top + targetDims.height;
+  var targetEndPosition = targetDims.top + targetDims.height;
 
   return {
     top: targetEndPosition + SPACE_BETWEEN_ELEMENTS,
@@ -9747,7 +9747,7 @@ function getBelowTargetPosition(dims, targetDims) {
 }
 
 function getBelowCenterTargetPosition(dims, targetDims) {
-  const targetEndPosition = targetDims.top + targetDims.height;
+  var targetEndPosition = targetDims.top + targetDims.height;
 
   return {
     top: targetEndPosition + SPACE_BETWEEN_ELEMENTS,
@@ -9756,7 +9756,7 @@ function getBelowCenterTargetPosition(dims, targetDims) {
 }
 
 function getRightOfTargetPosition(dims, targetDims) {
-  const targetEndPosition = targetDims.left + targetDims.width;
+  var targetEndPosition = targetDims.left + targetDims.width;
 
   return {
     top: getTopOffset(dims, targetDims),
@@ -9765,8 +9765,8 @@ function getRightOfTargetPosition(dims, targetDims) {
 }
 
 function canFitRightOfTarget(dims, targetDims, window) {
-  const targetEndPosition = targetDims.left + targetDims.width;
-  const elementTotalWidth = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
+  var targetEndPosition = targetDims.left + targetDims.width;
+  var elementTotalWidth = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
 
   return targetEndPosition + elementTotalWidth <= window.innerWidth;
 }
@@ -9780,19 +9780,19 @@ function elementTooWide(dims, targetDims, window) {
 }
 
 function canFitLeftOfTarget(dims, targetDims) {
-  const neededArea = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
+  var neededArea = dims.width + SPACE_BETWEEN_ELEMENTS * 2;
   return targetDims.left - neededArea >= 0;
 }
 
 function canFitBelowTarget(dims, targetDims, window) {
-  const targetBottomPosition = targetDims.top + targetDims.height;
-  const neededArea = dims.height + SPACE_BETWEEN_ELEMENTS * 2;
+  var targetBottomPosition = targetDims.top + targetDims.height;
+  var neededArea = dims.height + SPACE_BETWEEN_ELEMENTS * 2;
 
   return targetBottomPosition + neededArea <= window.innerHeight;
 }
 
 function canFitAboveTarget(dims, targetDims) {
-  const areaNeeded = targetDims.top - dims.height - SPACE_BETWEEN_ELEMENTS * 2;
+  var areaNeeded = targetDims.top - dims.height - SPACE_BETWEEN_ELEMENTS * 2;
   return areaNeeded >= 0;
 }
 
@@ -22089,7 +22089,7 @@ var Example = React.createClass({
             ),
             React.createElement(
                 Tooltip,
-                { selector: '#foo', tooltipStyles: { background: 'red' } },
+                { selector: '#foo', tooltipStyles: { color: 'red' } },
                 'Hello World!'
             ),
             React.createElement(
