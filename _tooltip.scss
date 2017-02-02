@@ -1,4 +1,4 @@
-.c-tooltip {
+.fc-tooltip {
   box-sizing: border-box;
   width: calc(100vw - 16px);
   position: absolute;
@@ -17,7 +17,7 @@
   }
 }
 
-.c-tooltip_overlay {
+.fc-tooltip_overlay {
   position: absolute;
   display: none;
   top: 0;

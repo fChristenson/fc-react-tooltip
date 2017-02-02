@@ -1,0 +1,33 @@
+{
+  "name": "fc-react-tooltip",
+  "version": "1.0.0",
+  "description": "Tooltip component made in react",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha __tests__/*.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fChristenson/fc-react-tooltip.git"
+  },
+  "author": "Fredrik Christenson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fChristenson/fc-react-tooltip/issues"
+  },
+  "homepage": "https://github.com/fChristenson/fc-react-tooltip#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-react": "^6.22.0",
+    "chai": "^3.5.0",
+    "eslint-plugin-react": "^6.9.0",
+    "mocha": "^3.2.0",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
