@@ -1,11 +1,12 @@
 {
   "name": "fc-react-tooltip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tooltip component made in react",
-  "main": "index.js",
+  "main": "index.dist.js",
   "scripts": {
     "test": "mocha __tests__/*.js",
-    "build": "webpack"
+    "build": "webpack",
+    "dist": "babel index.js --out-file index.dist.js --presets react"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/fChristenson/fc-react-tooltip#readme",
   "devDependencies": {
+    "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-react": "^6.22.0",
