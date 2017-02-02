@@ -1,0 +1,36 @@
+.c-tooltip {
+  box-sizing: border-box;
+  width: calc(100vw - 16px);
+  position: absolute;
+  border: 1px solid $olympus;
+  padding: $space-inset;
+  font-size: $mobile-small;
+  color: $kuzbas;
+  letter-spacing: 0.3px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  @include medium {
+    font-size: $tablet-small;
+  }
+
+  @include large {
+    font-size: $desktop-small;
+  }
+
+  @include mediumlarge {
+    width: auto;
+    max-width: 410px;
+    display: inline-block;
+  }
+}
+
+.c-tooltip_overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
