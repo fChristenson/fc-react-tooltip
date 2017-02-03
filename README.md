@@ -5,6 +5,10 @@ A tooltip component made in react
 ## Install
 `npm install fc-react-tooltip`
 
+## Demo
+
+![Demo](https://github.com/fChristenson/fc-react-tooltip/blob/master/demo.gif)
+
 ## Usage
 
 ```
