@@ -1,6 +1,6 @@
 {
   "name": "fc-react-tooltip",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Tooltip component made in react",
   "main": "dist/index.js",
   "scripts": {
@@ -26,10 +26,21 @@
     "chai": "^3.5.0",
     "eslint-plugin-react": "^6.9.0",
     "mocha": "^3.2.0",
-    "webpack": "^2.2.1"
-  },
-  "dependencies": {
+    "webpack": "^2.2.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
-  }
+  },
+  "peerDependencies": {
+    "react": "0.14.x|15.x.x",
+    "react-dom": "0.14.x|15.x.x"
+  },
+    "tags": [
+    "react",
+    "tooltip"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "tooltip"
+  ]
 }
