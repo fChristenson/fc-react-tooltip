@@ -14,8 +14,8 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function () {
-    var div = document.createElement('div');
-    document.body.appendChild(div);
+    this.node = document.createElement('div');
+    document.body.appendChild(this.node);
 
     ReactDOM.render(React.createElement(
       Tooltip,
@@ -24,7 +24,12 @@ module.exports = React.createClass({
         overlayStyles: this.props.overlayStyles,
         tooltipStyles: this.props.tooltipStyles },
       this.props.children
-    ), div);
+    ), this.node);
+  },
+
+  componentWillUnmount: function () {
+    ReactDOM.unmountComponentAtNode(this.node);
+    this.node.parentNode && this.node.parentNode.removeChild(this.node);
   },
 
   render: function () {
