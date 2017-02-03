@@ -9458,6 +9458,13 @@ module.exports = React.createClass({
 
   displayName: 'TooltipInitializer',
 
+  propTypes: {
+    children: React.PropTypes.node,
+    selector: React.PropTypes.string,
+    overlayStyles: React.PropTypes.object,
+    tooltipStyles: React.PropTypes.object
+  },
+
   componentDidMount: function () {
     this.node = document.createElement('div');
     document.body.appendChild(this.node);
@@ -9525,6 +9532,13 @@ var tooltipInitTransforms = {
 module.exports = React.createClass({
 
   displayName: 'Tooltip',
+
+  propTypes: {
+    children: React.PropTypes.node,
+    selector: React.PropTypes.string,
+    overlayStyles: React.PropTypes.object,
+    tooltipStyles: React.PropTypes.object
+  },
 
   getDefaultProps: function () {
     return {
