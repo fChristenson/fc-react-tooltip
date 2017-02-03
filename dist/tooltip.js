@@ -37,13 +37,6 @@ module.exports = React.createClass({
 
   displayName: 'Tooltip',
 
-  propTypes: {
-    children: React.PropTypes.node,
-    selector: React.PropTypes.string,
-    overlayStyles: React.PropTypes.object,
-    tooltipStyles: React.PropTypes.object
-  },
-
   getDefaultProps: function () {
     return {
       overlayStyles: {},
