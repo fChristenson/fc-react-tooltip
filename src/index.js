@@ -7,8 +7,8 @@ module.exports = React.createClass({
   displayName: 'TooltipInitializer',
 
   propTypes: {
-    children: React.PropTypes.node.isRequired,
-    selector: React.PropTypes.string.isRequired,
+    children: React.PropTypes.node,
+    selector: React.PropTypes.string,
     overlayStyles: React.PropTypes.object,
     tooltipStyles: React.PropTypes.object
   },
