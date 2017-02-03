@@ -1,12 +1,12 @@
 {
   "name": "fc-react-tooltip",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Tooltip component made in react",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha __tests__/*.js",
+    "test": "mocha src/__tests__/*.js",
     "build": "webpack",
-    "dist": "babel src --out-dir dist --presets react --ignore __test__/"
+    "dist": "babel src --ignore __tests__ --presets react --out-dir dist"
   },
   "repository": {
     "type": "git",
