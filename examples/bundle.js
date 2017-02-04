@@ -22032,95 +22032,20 @@ var React = __webpack_require__(31);
 var Tooltip = __webpack_require__(81);
 
 var Example = React.createClass({
-    displayName: 'Example',
+  displayName: 'Example',
 
 
-    render: function () {
-        return React.createElement(
-            'div',
-            null,
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', top: 0, left: 0 }, id: 'foo' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', top: 0, right: 0 }, id: 'bar' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', bottom: 0, left: 0 }, id: 'baz' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', bottom: 0, right: 0 }, id: 'bax' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', top: '50vh', left: '45vw' }, id: 'omg' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', top: '10vh', left: 0 }, id: 'foobar' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', top: '90vh', right: 0 }, id: 'barfoo' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                'button',
-                { style: { position: 'absolute', top: 0, right: '45vw' }, id: 'baxfoo' },
-                'Show Tooltip'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#foo', tooltipStyles: { color: 'red' } },
-                'Hello World!'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#bar' },
-                'Hello World!'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#baz' },
-                'Hello World!'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#bax' },
-                'Hello World!'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#omg' },
-                'Hello World!'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#foobar' },
-                'Hello World!'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#barfoo' },
-                'Hello World!'
-            ),
-            React.createElement(
-                Tooltip,
-                { selector: '#baxfoo' },
-                'Hello World!'
-            )
-        );
-    }
+  render: function () {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        Tooltip,
+        { selector: '#foo', tooltipStyles: {} },
+        'Hello World!'
+      )
+    );
+  }
 });
 
 ReactDOM.render(React.createElement(Example, null), document.getElementById('container'));

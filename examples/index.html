@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Example</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
+  <div style="width: 100vw; height: 100vh;" ondrop="setPos(event)" ondragover="allowDrop(event)">
+      <button 
+        style="position: absolute; padding: 8px;" 
+        draggable="true" 
+        id="foo">Drag & Click Me!</button>
+  </div>
   <div id="container"></div>
   <script src="./bundle.js"></script>
 </body>
+<script>
+
+function setPos(e) {
+  var btn = document.getElementById("foo");
+  var btnWidth = btn.getBoundingClientRect().width;
+  btn.style.top = e.clientY + "px";
+  btn.style.left = e.clientX - (btnWidth / 2) + "px";
+}
+
+function allowDrop(e) {
+  e.preventDefault();
+}
+</script>
 </html>
