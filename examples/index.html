@@ -24,9 +24,9 @@
 
 function setPos(e) {
   var btn = document.getElementById("foo");
-  var btnWidth = btn.getBoundingClientRect().width;
-  btn.style.top = e.clientY + "px";
-  btn.style.left = e.clientX - (btnWidth / 2) + "px";
+  var dims = btn.getBoundingClientRect();
+  btn.style.top = e.clientY - (dims.height / 2) + "px";
+  btn.style.left = e.clientX - (dims.width / 2) + "px";
 }
 
 function allowDrop(e) {
