@@ -1,6 +1,8 @@
 # fc-react-tooltip
 
-A tooltip component made in react
+A tooltip component made in react.
+The tooltip can be styled and figures out on it's own where to place itself 
+based on the available screen space relative to the trigger element.
 
 ## Install
 `npm install fc-react-tooltip`
