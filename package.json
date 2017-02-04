@@ -1,6 +1,6 @@
 {
   "name": "fc-react-tooltip",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Tooltip component made in react",
   "main": "dist/index.js",
   "scripts": {
