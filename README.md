@@ -36,7 +36,7 @@ var Example = React.createClass({
 
 ReactDOM.render(<Example />, document.getElementById('container'));
 ```
-Pass thea unique selector for the element that will trigger the tooltip on click to the `selector` property.
+Pass a unique selector for the element that will trigger the tooltip on click to the `selector` property.
 
 You can set the inline styles for the tooltip by passing your styles in the `tooltipStyles` property.
 
