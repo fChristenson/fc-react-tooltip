@@ -36,8 +36,10 @@ var Example = React.createClass({
 
 ReactDOM.render(<Example />, document.getElementById('container'));
 ```
+Pass thea unique selector for the element that will trigger the tooltip on click to the `selector` property.
 
 You can set the inline styles for the tooltip by passing your styles in the `tooltipStyles` property.
+
 You can also style the tooltip's overlay that covers the screen to catch the click that removes the tooltip by
 passing styles to `overlayStyles`.
 
