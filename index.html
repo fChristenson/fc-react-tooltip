@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 100vw; height: 100vh;" ondrop="setPos(event)" ondragover="allowDrop(event)">
+      <button 
+        style="position: absolute; padding: 8px;" 
+        draggable="true" 
+        id="foo">Drag & Click Me!</button>
+  </div>
+  <div id="container"></div>
+  <script type="text/javascript" src="https://rawgit.com/fChristenson/fc-react-tooltip/master/examples/bundle.js"></script>
+</body>
+<script>
+function setPos(e) {
+  var btn = document.getElementById("foo");
+  var dims = btn.getBoundingClientRect();
+  btn.style.top = e.clientY - (dims.height / 2) + "px";
+  btn.style.left = e.clientX - (dims.width / 2) + "px";
+}
+function allowDrop(e) {
+  e.preventDefault();
+}
+</script>
+</html>
