@@ -12,6 +12,7 @@ based on the available screen space relative to the trigger element.
 ![Demo](https://github.com/fChristenson/fc-react-tooltip/blob/master/demo.gif)
 
 [Try the online example](https://fchristenson.github.io/fc-react-tooltip/)
+
 ## Usage
 
 ```
