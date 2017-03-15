@@ -9537,13 +9537,14 @@ module.exports = React.createClass({
   componentDidMount: function () {
     var element = document.querySelector(this.props.selector);
     element.addEventListener('click', this.updateDims);
-
+    document.addEventListener('scroll', this.hideTooltip);
     this.refs.overlay.addEventListener('click', this.hideTooltip);
   },
 
   componentWillUnmount: function () {
     var element = document.querySelector(this.props.selector);
     element.removeEventListener('click', this.updateDims);
+    document.removeEventListener('scroll', this.hideTooltip);
     this.refs.overlay.removeEventListener('click', this.hideTooltip);
   },
 
