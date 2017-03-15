@@ -1,7 +1,7 @@
 .fc-tooltip {
   box-sizing: border-box;
   width: calc(100vw - 16px);
-  position: absolute;
+  position: fixed;
   border: 1px solid #dfe4e7;
   padding: 16px;
   font-size: 14px;
@@ -9,6 +9,7 @@
   letter-spacing: 0.3px;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: white;
 
   @media only screen and (min-width: 768px) {
     width: auto;
@@ -18,7 +19,7 @@
 }
 
 .fc-tooltip_overlay {
-  position: absolute;
+  position: fixed;
   display: none;
   top: 0;
   left: 0;

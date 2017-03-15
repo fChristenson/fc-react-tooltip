@@ -1,4 +1,4 @@
-var U = require('../src/tooltip_utils');
+var U = require('../tooltip_utils');
 var expect = require('chai').expect;
 
 describe('Tooltip utils test', function() {

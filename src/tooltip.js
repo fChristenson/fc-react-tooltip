@@ -4,7 +4,7 @@ var U = require('./tooltip_utils');
 var tooltilpBaseStyles = {
   boxSizing: 'border-box',
   width: 'calc(100vw - 16px)',
-  position: 'absolute',
+  position: 'fixed',
   border: '1px solid #dfe4e7',
   padding: '16px',
   fontSize: '14px',
@@ -12,11 +12,12 @@ var tooltilpBaseStyles = {
   letterSpacing: '0.3px',
   borderRadius: '4px',
   boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-  maxWidth: '410px'
+  maxWidth: '410px',
+  background: 'white'
 };
 
 var overlayBaseStyles = {
-  position: 'absolute',
+  position: 'fixed',
   display: 'none',
   top: 0,
   left: 0,

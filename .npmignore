@@ -1,5 +1,6 @@
-__tests__/
+src/__tests__/
 examples/
 .DS_Store
 npm-debug*
 webpack.config.js
+index.html
